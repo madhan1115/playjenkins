@@ -1,8 +1,8 @@
 pipeline {
 
   environment {
-    registry = "192.168.1.81:5000/justme/myweb"
-    dockerImage = ""
+    registry = "madhan1115/jenkins"
+    dockerImage = "testing_jen"
   }
 
   agent any
@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/justmeandopensource/playjenkins.git'
+        git 'https://github.com/madhan1115/k8stest.git'
       }
     }
 
