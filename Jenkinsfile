@@ -2,7 +2,7 @@ pipeline {
 
   environment {
     registry = "madhan1115"
-    dockerImage = "jenkins"
+    dockerImage = " "
   }
 
   agent any
