@@ -10,16 +10,8 @@ agent {
         label 'kubepods'
     }
 }
-
-  stages {
-    
-    stage('Initialize') {
-      steps {
-        def dockerHome = tool 'mydocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-      }
-    }  
-    stage('Checkout Source') {
+ 
+  stage('Checkout Source') {
       steps {
         git 'https://github.com/madhan1115/playjenkins.git'
       }
