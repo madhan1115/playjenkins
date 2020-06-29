@@ -12,7 +12,11 @@ agent {
 }
 
   stages {
-
+    
+    stage('Initialize'){
+        def dockerHome = tool 'mydocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
     stage('Checkout Source') {
       steps {
         git 'https://github.com/madhan1115/playjenkins.git'
