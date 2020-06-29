@@ -1,3 +1,11 @@
+pipeline {
+
+  environment {
+    registry = "madhan1115/jenkins"
+    dockerImage = ""
+  }
+
+  agent any
 
   stages {
 
