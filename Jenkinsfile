@@ -1,17 +1,7 @@
-pipeline {
 
-  environment {
-    registry = "madhan1115/jenkins"
-    dockerImage = ""
-  }
+  stages {
 
-agent {
-    node {
-        label 'kubepods'
-    }
-}
- 
-  stage('Checkout Source') {
+    stage('Checkout Source') {
       steps {
         git 'https://github.com/madhan1115/playjenkins.git'
       }
@@ -44,3 +34,5 @@ agent {
     }
 
   }
+
+}
